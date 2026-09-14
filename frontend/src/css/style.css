@@ -13,9 +13,9 @@
       radial-gradient(circle at 88% 92%, rgba(242, 169, 59, 0.07), transparent 45%);
     background-attachment: fixed;
   }
-  h1, h2, h3, .font-display {
+    h1, h2, h3 {
     @apply font-display;
-  }
+    }
   ::selection {
     @apply bg-amber/30 text-ink;
   }

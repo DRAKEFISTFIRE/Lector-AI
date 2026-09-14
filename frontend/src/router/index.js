@@ -17,19 +17,19 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/Home.vue'),
+    component: () => import('../views/home/Home.vue'),
     meta: { requiresAuth: true },
   },
   {
     path: '/crear',
     name: 'create-content',
-    component: () => import('../views/CreateContent.vue'),
+    component: () => import('../views/createContent/CreateContent.vue'),
     meta: { requiresAuth: true },
   },
   {
     path: '/cursos/:id',
     name: 'course-detail',
-    component: () => import('../views/CourseDetail.vue'),
+    component: () => import('../views/courses/CourseDetail.vue'),
     meta: { requiresAuth: true },
   },
 ]
