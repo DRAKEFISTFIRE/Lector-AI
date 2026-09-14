@@ -1,0 +1,15 @@
+{
+  "name": "lectoria",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n FRONTEND,BACKEND \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "php backend/artisan serve",
+    "build": "npm --prefix frontend run build",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "php backend/artisan serve"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

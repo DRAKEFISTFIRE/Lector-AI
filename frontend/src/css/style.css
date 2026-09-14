@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(95, 217, 198, 0.08), transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(242, 169, 59, 0.07), transparent 45%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, .font-display {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-amber/30 text-ink;
+  }
+  *:focus-visible {
+    outline: 2px solid theme('colors.teal.DEFAULT');
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-amber px-5 py-2.5
+           font-sans font-semibold text-canvas transition hover:bg-amber-soft
+           disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border
+           px-5 py-2.5 font-sans font-medium text-ink/90 transition hover:border-teal/50 hover:text-teal;
+  }
+  .field {
+    @apply w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-ink
+           placeholder:text-muted focus:border-teal/60 focus:outline-none;
+  }
+  .card {
+    @apply rounded-sheet border border-border bg-surface;
+  }
+}
